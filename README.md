@@ -1,18 +1,18 @@
-# libfacedetection
+# facedetection
 
 This is an open source library for CNN-based face detection in images. The CNN model has been converted to static variables in C source files. The source code does not depend on any other libraries. What you need is just a C++ compiler. You can compile the source code under Windows, Linux, ARM and any platform with a C++ compiler.
 
 SIMD instructions are used to speed up the detection. You can enable AVX2 if you use Intel CPU or NEON for ARM.
 
-The model files are provided in `src/facedetectcnn-data.cpp` (C++ arrays) & [the model (ONNX) from OpenCV Zoo](https://github.com/opencv/opencv_zoo/tree/master/models/face_detection_yunet). You can try our scripts (C++ & Python) in `opencv_dnn/` with the ONNX model. View the network architecture [here](https://netron.app/?url=https://raw.githubusercontent.com/ShiqiYu/libfacedetection.train/master/onnx/yunet*.onnx).
+The model files are provided in `src/facedetectcnn-data.cpp` (C++ arrays) & [the model (ONNX) from OpenCV Zoo](https://github.com/opencv/opee/master/models/face_detection_yunet). You can try our scripts (C++ & Python) in `opencv_dnn/` with the ONNX model. View the network architecture [here](https://netron.app/?url=https://raw.githubusercontent.com/detection.train/master/onnx/yunet*.onnx).
 
 Please note that OpenCV DNN does not support the latest version of YuNet with dynamic input shape. Please ensure you have the exact same input shape as the one in the ONNX model to run latest YuNet with OpenCV DNN.
 
 examples/detect-image.cpp and examples/detect-camera.cpp show how to use the library.
 
-The library was trained by [libfacedetection.train](https://github.com/ShiqiYu/libfacedetection.train).
+The library was trained by [libfacedetection.train](https://giiYu/libfacedetection.train).
 
-![Examples](/images/cnnresult.png "Detection example")
+![Examples](/images/cnnr.png "Detection example")
 
 ## How to use the code
 
@@ -23,14 +23,14 @@ It should be compiled at any platform which supports C/C++.
 
 Some tips:
 
-  * Please add facedetection_export.h file in the position where you copy your facedetectcnn.h files, add #define FACEDETECTION_EXPORT to  facedetection_export.h file. See: [issues #222](https://github.com/ShiqiYu/libfacedetection/issues/222)
+  * Please add facedetection_export.h file in the position where you copy your facedetectcnn.h files, add #define FACEDETECTION_EXPORT to  facedetection_export.h file. See: [issues #222](https://github.com/Shiqdetection/issues/222)
   * Please add -O3 to turn on optimizations when you compile the source code using g++.
   * Please choose 'Maximize Speed/-O2' when you compile the source code using Microsoft Visual Studio.
   * You can enable OpenMP to speedup. But the best solution is to call the detection function in different threads.
 
 You can also compile the source code to a static or dynamic library, and then use it in your project.
 
-[How to compile](COMPILE.md)
+[How to compile](COME.md)
 
 
 ## CNN-based Face Detection on Intel CPU
